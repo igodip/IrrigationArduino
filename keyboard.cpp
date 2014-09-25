@@ -1,7 +1,7 @@
 #include "keyboard.h"
 #include "arduino.h"
 
-#define DEBUG
+#undef DEBUG
 
 namespace idipaolo {
 	
@@ -34,11 +34,10 @@ namespace idipaolo {
 			
 			#ifdef DEBUG
 				Serial.println("Ok pressed");
-				
 			#endif
 			
 			
-			for(int i = 0; i < obs_index; ++i){
+			for(int i = 0; i <= obs_index; ++i){
 				observers[i]->onOkPressed();
 			}
 			
