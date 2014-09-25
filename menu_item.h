@@ -6,8 +6,9 @@
 namespace idipaolo {
 	
 	class MenuItem : public KeyboardObserver {
+		
 		public:
-			virtual void updateLcd() const = 0;
+			virtual void updateLcd() = 0;
 	};
 
 }

@@ -28,7 +28,7 @@ namespace idipaolo {
 			virtual void onForwardPressed();
 			virtual void onOkPressed();
 			
-			virtual void updateLcd() const;
+			virtual void updateLcd() ;
 			
 		protected:
 		

@@ -26,7 +26,7 @@ namespace idipaolo {
 	}
 	
 	void MenuEntry::setOk(MenuItem * menuEntry){
-	
+		this->ok = menuEntry;
 	}
 	
 	MenuItem * MenuEntry::getNext() const {
@@ -63,7 +63,7 @@ namespace idipaolo {
 		
 	}
 	
-	void MenuEntry::updateLcd() const {
+	void MenuEntry::updateLcd() {
 		this->menu->lcd->clear();
 		this->menu->lcd->setCursor(0,0);
 		this->menu->lcd->print(msg);

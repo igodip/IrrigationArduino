@@ -1,7 +1,7 @@
 #include "keyboard.h"
 #include "arduino.h"
 
-#undef DEBUG
+#define DEBUG
 
 namespace idipaolo {
 	

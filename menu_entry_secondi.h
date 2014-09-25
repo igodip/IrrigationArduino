@@ -10,7 +10,7 @@ namespace idipaolo {
 		public:
 			MenuEntrySecondi(Menu * menu,int * retVal);
 			
-			virtual void updateLcd() const;
+			virtual void updateLcd();
 		
 		
 	};

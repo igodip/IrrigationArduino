@@ -7,7 +7,7 @@ namespace idipaolo {
 		
 	}
 	
-	void MenuEntrySecondi::updateLcd() const {
+	void MenuEntrySecondi::updateLcd() {
 		
 		this->menu->lcd->clear();
 		this->menu->lcd->setCursor(0,0);

@@ -39,7 +39,7 @@ namespace idipaolo {
 		this->updateLcd();
 	}
 	
-	void MenuEntryInt::updateLcd() const{
+	void MenuEntryInt::updateLcd() {
 		this->menu->lcd->clear();
 		this->menu->lcd->print(current_value);
 	}

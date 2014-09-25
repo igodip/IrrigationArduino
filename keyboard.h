@@ -4,7 +4,7 @@
 #include "keyboard_observer.h"
 
 //Maybe linkedList?
-#define MAX_OBSERVERS 10
+#define MAX_OBSERVERS 1
 
 namespace idipaolo {
 	

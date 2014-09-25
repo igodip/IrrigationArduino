@@ -16,7 +16,7 @@ namespace idipaolo {
 			void onForwardPressed();
 			
 			//Da rimuovere!
-			void updateLcd() const;
+			virtual void updateLcd();
 			
 			int getCurrentValue() const;
 		

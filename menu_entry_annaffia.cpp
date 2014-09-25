@@ -1,7 +1,7 @@
 #include "menu_entry_annaffia.h"
 #include "arduino.h"
 
-#define DEBUG
+#undef DEBUG
 
 namespace idipaolo {
 	
@@ -20,6 +20,8 @@ namespace idipaolo {
 		#endif
 		
 		this->annStrategy->annaffia();
+		
+		this->menu->setCurrentMenuItem(this);
 
 	}
   

@@ -1,7 +1,7 @@
 #include "ann1_strategy.h"
 #include "arduino.h"
 
-#define DEBUG
+#undef DEBUG
 
 namespace idipaolo {
 	
