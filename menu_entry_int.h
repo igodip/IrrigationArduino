@@ -2,6 +2,7 @@
 #define _MENU_ENTRY_INT_H
 
 #include "menu_entry.h"
+#include "arduino.h"
 
 namespace idipaolo {
 	
@@ -9,26 +10,25 @@ namespace idipaolo {
 		
 		public:
 			
-			MenuEntryInt(Menu * menu,int min_int,int max_int,int * retVal);
+			MenuEntryInt(Menu * menu,uint8_t min_int,uint8_t max_int);
 			
 			void onBackPressed();
-			void onOkPressed();
+			virtual void onOkPressed();
 			void onForwardPressed();
 			
 			//Da rimuovere!
 			virtual void updateLcd();
 			
-			int getCurrentValue() const;
+			uint8_t getCurrentValue() const;
 		
 		protected:
-			int * ret_val;
 			Menu * menu;
 		
 		private:
 			
-			int current_value;
-			int min_int;
-			int max_int;
+			uint8_t current_value;
+			uint8_t min_int;
+			uint8_t max_int;
 	};
 
 }

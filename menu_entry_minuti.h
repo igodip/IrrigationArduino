@@ -8,7 +8,7 @@ namespace idipaolo {
 	class MenuEntryMinuti : public MenuEntryInt {
 		
 		public:
-			MenuEntryMinuti(Menu * menu,int * retVal);
+			MenuEntryMinuti(Menu * menu);
 			
 			virtual void updateLcd();
 		

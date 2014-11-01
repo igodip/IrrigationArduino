@@ -2,13 +2,12 @@
 
 namespace idipaolo {
 	
-	MenuEntryInt::MenuEntryInt(Menu * menu,int min_int,int max_int,int * retVal)
+	MenuEntryInt::MenuEntryInt(Menu * menu,uint8_t min_int,uint8_t max_int)
 	{
 		
 		current_value = min_int;
 		this->min_int = min_int;
 		this->max_int = max_int;
-		this->ret_val = retVal;
 		this->menu = menu;
 	
 	}
@@ -17,7 +16,7 @@ namespace idipaolo {
 		
 		--current_value;
 		
-		if(current_value < min_int)
+		if(current_value > max_int)
 			current_value = max_int;
 		
 		this->updateLcd();
@@ -25,7 +24,7 @@ namespace idipaolo {
 	
 	void MenuEntryInt::onOkPressed(){
 		
-		*ret_val = current_value;
+		//*ret_val = current_value;
 		//this->menu->setCurrentMenuEntry()
 		
 	}
@@ -44,7 +43,7 @@ namespace idipaolo {
 		this->menu->lcd->print(current_value);
 	}
 	
-	int MenuEntryInt::getCurrentValue() const {
+	uint8_t MenuEntryInt::getCurrentValue() const {
 		return current_value;
 		
 	}

@@ -76,10 +76,11 @@ THE SOFTWARE.
 //Hours
 #define DS3231_HOURS_MODE_BIT       6 // 0 = 24-hour mode, 1 = 12-hour mode
 #define DS3231_HOURS_AMPM_BIT       5 // 2nd HOURS_10 bit if in 24-hour mode
+#define DS3231_HOURS_20_BIT			5
 #define DS3231_HOURS_10_BIT         4
 #define DS3231_HOURS_1_BIT          3
 #define DS3231_HOURS_1_LENGTH       4
-#define DS3231_HOURS_MASK	    0x1F
+#define DS3231_HOURS_MASK	    	0x3F
 
 //Day
 #define DS3231_DAY_MASK				0x07
@@ -140,8 +141,8 @@ public:
 	void setMinutes(uint8_t minutes);
 
 	//Hours
-	uint8_t getHours12() ;
-	void setHours12(uint8_t hours);
+	uint8_t getHours() ;
+	void setHours(uint8_t hours);
 
 	//HoursMode
 	uint8_t getMode12() ;

@@ -1,6 +1,8 @@
 #ifndef _DATE_TIME_H
 #define _DATE_TIME_H
 
+#include "arduino.h"
+
 //Date class
 class Date {
 public:
@@ -38,7 +40,9 @@ public:
         bool operator>(const Time & obj) const{
           
           return obj < (*this);
-        } 
+        }
+		
+		
           
 };
 

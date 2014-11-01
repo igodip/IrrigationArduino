@@ -85,15 +85,23 @@ uint8_t DS3231::getMinutes() {
 }
 
 void DS3231::setMinutes(uint8_t minutes){
-	
+	minutes = DEC2BCD(minutes) & DS3231_MINUTES_MASK;
+	I2Cdev::writeByte(devAddr,DS3231_RA_MINUTES,minutes);
 	//I2C
 }
 
 //Hours
-uint8_t DS3231::getHours12() {
+uint8_t DS3231::getHours() {
   I2Cdev::readByte(devAddr, DS3231_RA_HOURS,buffer);
   return BCD2DEC(buffer[0] & DS3231_HOURS_MASK);
   
+  
+}
+
+void DS3231::setHours(uint8_t hours){
+	hours = DEC2BCD(hours) & DS3231_HOURS_MASK;
+	I2Cdev::writeByte(devAddr,DS3231_RA_HOURS,hours);
+	//I2C
 }
 
 //Day
@@ -135,7 +143,9 @@ DateTime DS3231::getDateTime() {
 
 	t.seconds = BCD2DEC(buffer[0] & DS3231_SECONDS_MASK);
 	t.minutes = BCD2DEC(buffer[1] & DS3231_MINUTES_MASK);
+	
 	//TODO: :O see doc
+	//Maledizione
 	t.hours = BCD2DEC(buffer[2] & DS3231_HOURS_MASK);
 
 	t.dayOfWeek = buffer[3] & DS3231_DAY_MASK;

@@ -2,8 +2,8 @@
 
 namespace idipaolo {
 	
-	MenuEntrySecondi::MenuEntrySecondi(Menu * menu,int * retVal) :
-		MenuEntryInt(menu,0,59,retVal) {
+	MenuEntrySecondi::MenuEntrySecondi(Menu * menu) :
+		MenuEntryInt(menu,0,59) {
 		
 	}
 	

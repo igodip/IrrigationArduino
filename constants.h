@@ -7,6 +7,9 @@
 #define STR_HOURS			"Ore"
 
 //EEPROM Addresses
+#define EE_ALARMS			0x0
+#define EE_PUMPS_CONFIGS	0x200
+
 
 
 #endif

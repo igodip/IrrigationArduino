@@ -1,25 +1,19 @@
-#ifndef _MENU_ENTRY_ORA
-#define _MENU_ENTRY_ORA
+#ifndef _MENU_ENTRY_ORA_H
+#define _MENU_ENTRY_ORA_H
 
-#include "menu_entry.h"
-#include "ds3231.h"
+#include "menu_entry_int.h"
 
 namespace idipaolo {
 	
-	class MenuEntryOra : public MenuEntry {
+	class MenuEntryOra : public MenuEntryInt {
 		
 		public:
+		
 			MenuEntryOra(Menu * menu);
 			
-			virtual void updateLcd() ;
-			
-			virtual void onOkPressed();
-			
-		private:
-		
-			DS3231 ds3231;
-	
+			virtual void updateLcd();
 	};
+	
 }
 
 #endif
